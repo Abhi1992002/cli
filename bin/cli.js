@@ -127,6 +127,18 @@ const intializedCli = async () => {
             RESEND_API_KEY: () => p.text({
                 message: "please enter resend api key? (email verification)",
             }),
+            STRIPE_SECRET_KEY: () => p.text({
+                message: "please enter stripe secret key?",
+            }),
+            NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: () => p.text({
+                message: "please enter stripe publishable key?",
+            }),
+            STRIPE_WEBHOOK_SECRET: () => p.text({
+                message: "please enter stripe webhook secret? ",
+            }),
+            NEXT_PUBLIC_APP_URL: () => p.text({
+                message: "please enter public app url?",
+            }),
         }, {
             onCancel: ({ results }) => {
                 p.cancel("Operation cancelled.");
@@ -144,6 +156,10 @@ const intializedCli = async () => {
             DIRECT_URL: envInfo.DIRECT_URL,
             RESEND_API_KEY: envInfo.RESEND_API_KEY,
             AUTH_SECRET: envInfo.AUTH_SECRET,
+            STRIPE_SECRET_KEY: envInfo.STRIPE_SECRET_KEY,
+            NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: envInfo.NEXT_PUBLIC_APP_URL,
+            STRIPE_WEBHOOK_SECRET: envInfo.STRIPE_WEBHOOK_SECRET,
+            NEXT_PUBLIC_APP_URL: envInfo.NEXT_PUBLIC_APP_URL,
         });
         s.stop("🥳 .env file created successfully");
     }
@@ -160,6 +176,10 @@ const intializedCli = async () => {
             DIRECT_URL: undefined,
             RESEND_API_KEY: undefined,
             AUTH_SECRET: undefined,
+            STRIPE_SECRET_KEY: undefined,
+            NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: undefined,
+            STRIPE_WEBHOOK_SECRET: undefined,
+            NEXT_PUBLIC_APP_URL: undefined,
         });
         s.stop("🥳 .env file created successfully");
     }

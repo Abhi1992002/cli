@@ -1,6 +1,6 @@
 {
   "name": "@abhimanyu1992002/cli",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "",
   "type": "commonjs",
   "bin": "./bin/cli.js",
